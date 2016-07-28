@@ -5,9 +5,10 @@ BLE-Replay is a Bluetooth Low Energy (BLE) peripheral assessment tool. It
 pulls/consumes Bluetooth HCI logs from your mobile device and extracts all of
 the writes that the central makes to a peripheral. 
 
-This data can be replayed or saved to disk for modification so you can get
-straight to testing without extracting data with wireshark or scripting things
-with tools like gatttool. It allows for hand-crafting of your own sequences of
+This data can be replayed using most Bluetooth dongles from a Linux host, or
+saved to disk for modification. This tool gets you straight to testing a
+peripheral without extracting data with wireshark or scripting things with
+tools like gatttool. It allows for hand-crafting of your own sequences of
 characteristic writes to test against a device, including support for
 byte-level fuzzing. 
 
