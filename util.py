@@ -16,7 +16,6 @@ def gatt_writes(dev, addr, seclevel, addr_type, rows):
     conn = BLEConnectionManager(addr, dev, addr_type,
                                 seclevel, True)
     conn.connect()
-    conn = []
     for row in rows:
         handle, message, fuzz_positions, num_iterations = row
         gatt_write(conn, handle, message, fuzz_positions,
