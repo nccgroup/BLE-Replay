@@ -35,9 +35,9 @@ def gatt_write(conn, handle, message, fuzz_positions, num_iterations):
                 binascii.hexlify(chr(random.randint(0, 255))) + \
                 current_message[position*2:]
     for _ in range(num_iterations):
-        decoded = current_message.decode('hex').encode('utf-8')
-        print "sending: " + current_message + " (" + \
-              decoded + ") on " + handle
+        print "writing {} ({}) to handle {}".format(current_message,
+                                              repr(current_message.decode('hex')),
+                                              handle)
         if not conn.isConnected:
             print "Connection lost, reconnecting"
             conn.connect()
