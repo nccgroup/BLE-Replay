@@ -280,6 +280,9 @@ def parse(data):
 
 def cmd_to_str(opcode):
     """
-    Return a string representing the opcode
+    Return a string representing the opcode if we know it
     """
-    return HCI_COMMANDS[opcode]
+    if opcode in HCI_COMMANDS:
+        return HCI_COMMANDS[opcode]
+    else:
+        return "UNKNOWN OPCODE"
